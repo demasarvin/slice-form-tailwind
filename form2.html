@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+        },
+        
+        extend: {
+            margin: {
+                '42px': '42px',
+                '50px': '50px',
+				'60px': '60px',
+                '99px': '99px',
+                '110px': '110px',
+            },
+            padding: {
+                '18px': '18px',
+            },
+            height: {
+                '108': '6.75rem',
+            },
+            colors: {
+                neutral: '#170F49',
+                abu:{
+                   	100:'#6F6C90',
+                   	200:'#EFF0F6',
+                	300:'#FAF8F8'
+                },
+                ungu:{
+					100:'#9E96F2',
+					200:'#FF3AF7',
+				},
+                biru:'#EC31F0',
+            },
+            fontSize: {
+                '34': ['34px', '46px'],
+            }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="mx-99px mt-50px">
+    <div class="bg-white h-108 rounded-lg shadow-lg flex items-center justify-center text-2xl font-bold text-neutral">
+        Get an Estimate for Workspace
+    </div>
+    <div>
+      <form class="flex flex-col items-center justify-center mt-42px">
+        <div class="w-3/4 rounded-3xl border border-gray-200 bg-abu-300 px-16 pt-6">
+			<h3 class="text-2xl font-bold text-neutral border-b pb-4">Your Requirements</h3>
+			<div class="flex-col pb-12">
+				<label for="space" class="block text-lg font-medium text-neutral pb-18px pt-12">Space Type</label>
+				<select id="space" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" required>
+					<option>United States</option>
+					<option>Canada</option>
+					<option>France</option>
+					<option>Germany</option>
+				</select>
+			</div>
+			<div class="flex-col pb-12">
+				<label for="number" class="block text-lg font-medium text-neutral pb-18px">Number of People</label>
+				<input type="number" id="phone" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" placeholder="01" required>
+			</div>
+			<div class="flex space-x-16 pb-12">
+				<div>
+					<label for="checkin" class="block text-lg font-medium text-neutral pb-18px">Check In</label>
+					<input type="date" id="checkin" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" placeholder=" dd - mm - yyyy" required>
+				</div>
+				<div>
+					<label for="checkout" class="block text-lg font-medium text-neutral pb-18px">Check Out</label>
+					<input type="date" id="checkout" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" placeholder=" dd - mm - yyyy" required>
+				</div>
+			</div>
+			<div class="flex-col pb-12">
+				<label for="location" class="block text-lg font-medium text-neutral pb-18px">Location</label>
+				<select id="location" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5"required>
+					<option>United States</option>
+					<option>Canada</option>
+					<option>France</option>
+					<option>Germany</option>
+				</select>
+			</div>
+			<div class="flex-col pb-5">
+				<label for="preferences" class="block text-lg font-medium text-neutral pb-18px">Any specific preferences</label>
+				<select id="preferences" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" required>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<textarea id="message" rows="4" class="w-72 p-2.5 text-gray-900 rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500  dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-60px"  placeholder="Please mention here"></textarea>
+        </div>
+      </form>
+      <div class="flex justify-center mt-12 mb-60">
+        <div class="w-3/4">
+			<div class="flex justify-between">
+				<button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-2xl font-bold text-ungu-200 rounded-full group bg-gradient-to-br from-ungu-100 to-biru group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+					<span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-full group-hover:bg-opacity-0">
+						Back
+					</span>
+				</button>
+				<button type="button" class="w-32 text-white bg-gradient-to-br from-ungu-100 to-biru hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-bold rounded-full text-2xl px-5 py-2.5">Submit</button>
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

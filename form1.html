@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+        },
+        
+        extend: {
+            margin: {
+                '42px': '42px',
+                '50px': '50px',
+                '99px': '99px',
+                '110px': '110px',
+            },
+            padding: {
+                '18px': '18px',
+            },
+            height: {
+                '108': '6.75rem',
+            },
+            colors: {
+                neutral: '#170F49',
+                abu:{
+                  100:'#6F6C90',
+                  200:'#EFF0F6',
+                  300:'#FAF8F8'
+                },
+                ungu:'#9E96F2',
+                biru:'#EC31F0',
+            },
+            fontSize: {
+                '34': ['34px', '46px'],
+            }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="mx-99px mt-50px">
+    <div class="bg-white h-108 rounded-lg shadow-lg flex items-center justify-center text-2xl font-bold text-neutral">
+        Get an Estimate for Workspace
+    </div>
+    <div>
+      <div class="flex flex-col items-center justify-center mt-110px">
+        <h2 class="text-34 font-bold text-neutral">Post Your Requirements</h2>
+        <p class="max-w-lg text-center text-lg font-medium text-abu-100 pt-3">Please fill the form below to receive a quote for workspace. Please add all the details required.</p>
+      </div>
+      <form class="flex flex-col items-center justify-center mt-42px">
+        <div class="w-3/5 rounded-3xl border border-gray-200 bg-abu-300 px-16 pt-6">
+          <h3 class="text-2xl font-bold text-neutral">Contact details</h3>
+          <p class="text-lg font-medium text-abu-100 border-b pt-1.5 pb-4">Please fill your information so we can get in touch with you.</p>
+          <div class="flex-col pb-12">
+            <label for="name" class="block text-lg font-medium text-neutral pb-18px pt-12">Name</label>
+            <input type="text" id="name" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" placeholder="Your Name" required>
+          </div>
+          <div class="flex-col pb-12">
+            <label for="phone" class="block text-lg font-medium text-neutral pb-18px">Phone Number</label>
+            <input type="tel" id="phone" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" placeholder="(123) 456 - 7890" required>
+          </div>
+          <div class="flex-col pb-12">
+            <label for="email" class="block text-lg font-medium text-neutral pb-18px">Email</label>
+            <input type="email" id="email" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" placeholder="Your Mail ID" required>
+          </div>
+          <div class="flex-col pb-12">
+            <label for="date" class="block text-lg font-medium text-neutral pb-18px">Date</label>
+            <input type="date" id="date" class="w-72 rounded-full border border-gray-200 text-lg text-abu-100 p-5" placeholder="dd - mm - yyyy" required>
+          </div>
+        </div>
+      </form>
+      <div class="text-center mt-12 mb-60">
+        <button type="button" class="w-32 text-white bg-gradient-to-br from-ungu to-biru hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-bold rounded-full text-2xl px-5 py-2.5">Next</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
